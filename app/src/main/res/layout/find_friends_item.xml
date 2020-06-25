@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8sp"
+        android:layout_margin="10sp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layout_person_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <ImageView
+                    android:id="@+id/img_people"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/profile_image" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="50sp"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:hint="User Name"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="center" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50sp"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:paddingLeft="2sp"
+                        android:paddingRight="2sp"
+                        >
+
+                        <Button
+                            android:id="@+id/btn_request_accept"
+                            android:layout_width="0dp"
+                            android:layout_height="50sp"
+                            android:layout_gravity="bottom"
+                            android:background="@color/colorPrimary"
+                            android:textColor="@android:color/white"
+                            android:textAllCaps="false"
+                            android:text="Accept Request"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:layout_marginEnd="1sp"
+                            />
+
+                        <Button
+                            android:id="@+id/btn_request_decline"
+                            android:layout_width="0dp"
+                            android:layout_height="50sp"
+                            android:layout_weight="1"
+                            android:layout_gravity="bottom"
+                            android:background="@android:color/holo_blue_dark"
+                            android:textColor="@android:color/white"
+                            android:textAllCaps="false"
+                            android:text="Cancel Request"
+                            android:visibility="gone"
+                            android:layout_marginStart="1sp"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

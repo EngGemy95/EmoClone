@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".VideoChatActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/subscriber_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccent">
+
+                    <FrameLayout
+                        android:id="@+id/publihser_container"
+                        android:layout_width="90sp"
+                        android:layout_height="120sp"
+                        android:layout_gravity="bottom|end"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_margin="10sp"></FrameLayout>
+                </FrameLayout>
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/close_video_chat_btn"
+                android:layout_width="80sp"
+                android:layout_height="80sp"
+                android:src="@drawable/cancel_call"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="20sp" />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
